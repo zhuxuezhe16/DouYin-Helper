@@ -1,0 +1,23 @@
+{
+  "name": "douyin_helper",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "packager_mac": "electron-packager ./ Tester --platform=win32 --arch=x64 ./build --overwrite --icon=./app.icns",
+    "packager": "electron-packager ./ Tester --platform=win32 --arch=x64 ./build --overwrite --icon=./app.icns",
+    "install": "npm install --save-dev electron-packager",
+    "run": "npm run-script packager"
+  },
+  "description": "douyin_helper",
+  "dependencies": {
+    "electron": "^4.2.12",
+    "node-fetch": "^2.6.0",
+    "shell": "^0.5.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^14.1.0"
+  },
+  "author": "Hamm",
+  "license": "ISC"
+}
