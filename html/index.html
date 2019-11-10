@@ -485,10 +485,16 @@
         }
         function getProfileTabbarLikeText(_profileJson) {
             var _temp = JSON.stringify(_profileJson).match(/android.support.v7.app.ActionBar\$Tab".*?"_text":"(喜欢.*?)","_resource-id":"android:id\//);
+            if(!_temp){
+                return false;
+            }
             return _temp.length > 1 ? _temp[1] : false;
         }
         function getProfileTabbarLike(_profileJson) {
             var _temp = JSON.stringify(_profileJson).match(/"_text":"喜欢.*?","_bounds":"(.*?)"/)
+            if(!_temp){
+                return false;
+            }
             if (_temp.length < 2) {
                 return false;
             }
@@ -500,6 +506,9 @@
         }
         function getProfileTabbarVideo(_profileJson) {
             var _temp = JSON.stringify(_profileJson).match(/"_text":"作品.*?","_bounds":"(.*?)"/)
+            if(!_temp){
+                return false;
+            }
             if (_temp.length < 2) {
                 return false;
             }
@@ -511,6 +520,9 @@
         }
         function getProfileTabbarVideoText(_profileJson) {
             var _temp = JSON.stringify(_profileJson).match(/_text":"(作品.*?)","_resource-id":"android:id\/text/);
+            if(!_temp){
+                return false;
+            }
             return _temp.length > 2 ? _temp[1] : false;
         }
         function getThePageLayout() {
@@ -523,6 +535,9 @@
         }
         function getFollowButton(layoutJson) {
             var _temp = JSON.stringify(layoutJson).match(/_resource-id":"com.ss.android.ugc.aweme:id\/cml".*?_bounds":"(.*?)"/);
+            if(!_temp){
+                return false;
+            }
             if (_temp.length < 2) {
                 return false;
             }
