@@ -4,10 +4,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "packager_mac": "electron-packager ./ Tester --platform=win32 --arch=x64 ./build --overwrite --icon=./app.icns",
-    "packager": "electron-packager ./ Tester --platform=win32 --arch=x64 ./build --overwrite --icon=./app.icns",
-    "install": "npm install --save-dev electron-packager",
-    "run": "npm run-script packager"
+    "install": "npm install --save-dev electron-builder"
   },
   "description": "douyin_helper",
   "dependencies": {
@@ -15,8 +12,14 @@
     "node-fetch": "^2.6.0",
     "shell": "^0.5.0"
   },
-  "devDependencies": {
-    "electron-packager": "^14.1.0"
+  "build": {
+    "productName": "DouyinHelper",
+    "appId": "cn.hamm.douyin_helper",
+    "copyright": "Hamm.cn",
+    "directories": {
+      "output": "build"
+    },
+    "win": {}
   },
   "author": "Hamm",
   "license": "ISC"
