@@ -118,7 +118,7 @@
         .product {
             -webkit-app-region: drag;
             color: #111;
-            padding-top: 30px;
+            /* padding-top: 30px; */
         }
 
         .intro {
@@ -311,7 +311,7 @@
             openProfileTask();
         }
         function scollNextPage() {
-            var _temp = JSON.stringify(layJson).match(/com.ss.android.ugc.aweme:id\/d0t.*?"_bounds":"(.*?)"/);
+            var _temp = JSON.stringify(layJson).match(/"_bounds":"(.*?)"/);
             var locationArray = _temp[1].match(/[\d]+/g);
             nowIndex = 0;
             var x = parseInt((locationArray[2] - locationArray[0]) / 2);
