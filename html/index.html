@@ -472,12 +472,16 @@
             }
         }
         function getFansHeadPostionList(_json) {
-            var _temp = JSON.stringify(_json).match(/com.ss.android.ugc.aweme:id\/b8l"(.*?)"_bounds":"(.*?)"/g);
+            console.log(_json);
+            var _temp = JSON.stringify(_json).match(/.*?"_text":".*?关注.*?","_resource-id":"com.ss.android.ugc.aweme:id.*?"_bounds":"(.*?)"/g);
             var _fansPositionList = [];
             for (var _index in _temp) {
-                var _item = _temp[_index].match(/"_bounds":"(.*?)"/);
+                if (_temp[_index].search('_text":"关注"') == -1) {
+                    continue;
+                }
+                var _item = _temp[_index].match(/.*?关注.*?_bounds":"(.*?)"/);
                 _fansPositionList.push({
-                    x: parseInt((parseInt(_item[1].match(/[\d]+/g)[2]) + parseInt(_item[1].match(/[\d]+/g)[0])) / 2),
+                    x: parseInt((parseInt(_item[1].match(/[\d]+/g)[2])) / 2),
                     y: parseInt((parseInt(_item[1].match(/[\d]+/g)[3]) + parseInt(_item[1].match(/[\d]+/g)[1])) / 2),
                 });
             }
@@ -485,14 +489,14 @@
         }
         function getProfileTabbarLikeText(_profileJson) {
             var _temp = JSON.stringify(_profileJson).match(/android.support.v7.app.ActionBar\$Tab".*?"_text":"(喜欢.*?)","_resource-id":"android:id\//);
-            if(!_temp){
+            if (!_temp) {
                 return false;
             }
             return _temp.length > 1 ? _temp[1] : false;
         }
         function getProfileTabbarLike(_profileJson) {
             var _temp = JSON.stringify(_profileJson).match(/"_text":"喜欢.*?","_bounds":"(.*?)"/)
-            if(!_temp){
+            if (!_temp) {
                 return false;
             }
             if (_temp.length < 2) {
@@ -506,7 +510,7 @@
         }
         function getProfileTabbarVideo(_profileJson) {
             var _temp = JSON.stringify(_profileJson).match(/"_text":"作品.*?","_bounds":"(.*?)"/)
-            if(!_temp){
+            if (!_temp) {
                 return false;
             }
             if (_temp.length < 2) {
@@ -520,7 +524,7 @@
         }
         function getProfileTabbarVideoText(_profileJson) {
             var _temp = JSON.stringify(_profileJson).match(/_text":"(作品.*?)","_resource-id":"android:id\/text/);
-            if(!_temp){
+            if (!_temp) {
                 return false;
             }
             return _temp.length > 2 ? _temp[1] : false;
@@ -531,11 +535,19 @@
             exec("adb pull /data/local/tmp/uidump.xml");
             var xml = fs.readFileSync("./uidump.xml", 'utf-8');
             var x2js = new X2JS();
-            return x2js.xml_str2json(xml);
+            var json = x2js.xml_str2json(xml);
+            // console.log(JSON.stringify(json));
+            return json;
         }
         function getFollowButton(layoutJson) {
-            var _temp = JSON.stringify(layoutJson).match(/_resource-id":"com.ss.android.ugc.aweme:id\/cml".*?_bounds":"(.*?)"/);
-            if(!_temp){
+            console.log(JSON.stringify(layoutJson));
+            if (JSON.stringify(layoutJson).search("取消关注") != -1) {
+                //包含取消关注按钮
+                echo("貌似已经关注过，无需操作");
+                return false;
+            }
+            var _temp = JSON.stringify(layoutJson).match(/关注.*?android.widget.Button.*?_bounds":"(.*?)"/);
+            if (!_temp) {
                 return false;
             }
             if (_temp.length < 2) {
