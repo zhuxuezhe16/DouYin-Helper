@@ -4,6 +4,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "dist": "electron-builder --win --x64",
     "install": "npm install --save-dev electron-builder"
   },
   "description": "douyin_helper",
