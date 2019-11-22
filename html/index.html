@@ -315,7 +315,7 @@
             var locationArray = _temp[1].match(/[\d]+/g);
             nowIndex = 0;
             var x = parseInt((locationArray[2] - locationArray[0]) / 2);
-            exec("adb shell input swipe " + x + " " + (locationArray[3] - 100) + " " + x + " " + locationArray[1] + " 1000");
+            exec("adb shell input swipe " + x + " " + (locationArray[3] - 100) + " " + x + " " + (locationArray[1] - 100) + " 1000");
             setTimeout(() => {
                 echo("滑动到下一页");
                 getFansList();
