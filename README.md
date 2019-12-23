@@ -1,7 +1,7 @@
 
 # 抖音小助手  
-[![star](https://gitee.com/hamm/douyin_helper/badge/star.svg?theme=white)](https://gitee.com/hamm/douyin_helper/stargazers)
-[![fork](https://gitee.com/hamm/douyin_helper/badge/fork.svg?theme=white)](https://gitee.com/hamm/douyin_helper/members)
+[![star](https://gitee.com/hamm/douyin_helper/badge/star.svg?theme=gray)](https://gitee.com/hamm/douyin_helper/stargazers)
+[![fork](https://gitee.com/hamm/douyin_helper/badge/fork.svg?theme=gray)](https://gitee.com/hamm/douyin_helper/members)
 <img src="https://svg.hamm.cn/?key=语言&value=JavaScript"/>
 <img src="https://svg.hamm.cn/?key=源码依赖&value=Electron"/>
 <img src="https://svg.hamm.cn/?key=调试&value=Android ADB Tools"/>
