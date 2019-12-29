@@ -1,11 +1,13 @@
 
 # 抖音小助手  
-[![star](https://gitee.com/hamm/douyin_helper/badge/star.svg?theme=gray)](https://gitee.com/hamm/douyin_helper/stargazers)
-[![fork](https://gitee.com/hamm/douyin_helper/badge/fork.svg?theme=gray)](https://gitee.com/hamm/douyin_helper/members)
+<img src="https://svg.hamm.cn?key=gitee&value=star&project=hamm/douyin_helper">
+<img src="https://svg.hamm.cn?key=gitee&value=fork&project=hamm/douyin_helper">
+<img src="https://svg.hamm.cn?key=gitee&value=watch&project=hamm/douyin_helper">
+<img src="https://svg.hamm.cn?key=gitee&value=commit&project=hamm/douyin_helper">
 <img src="https://svg.hamm.cn/?key=语言&value=JavaScript"/>
-<img src="https://svg.hamm.cn/?key=源码依赖&value=Electron"/>
-<img src="https://svg.hamm.cn/?key=调试&value=Android ADB Tools"/>
-<img src="https://svg.hamm.cn/?key=前端框架&value=Vue/WeUI"/>
+<img src="https://svg.hamm.cn/?key=依赖&value=Electron"/>
+<img src="https://svg.hamm.cn/?key=调试&value=ADB Tools"/>
+<img src="https://svg.hamm.cn/?key=前端&value=Vue/WeUI"/>
 
 * * *
 
