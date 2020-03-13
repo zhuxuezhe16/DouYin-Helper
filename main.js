@@ -35,6 +35,7 @@ function createWindow() {
         // minWidth: 300,
         title: "APP",
         center: true,
+        nodeIntegration: true
     });
     // win.setAlwaysOnTop(true)
     // 然后加载应用的 index.html。
