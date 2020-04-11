@@ -1,13 +1,13 @@
 
 # 抖音小助手  
-<img src="https://svg.hamm.cn?key=gitee&value=star&project=hamm/douyin_helper">
-<img src="https://svg.hamm.cn?key=gitee&value=fork&project=hamm/douyin_helper">
-<img src="https://svg.hamm.cn?key=gitee&value=watch&project=hamm/douyin_helper">
-<img src="https://svg.hamm.cn?key=gitee&value=commit&project=hamm/douyin_helper">
-<img src="https://svg.hamm.cn/?key=语言&value=JavaScript"/>
-<img src="https://svg.hamm.cn/?key=依赖&value=Electron"/>
-<img src="https://svg.hamm.cn/?key=调试&value=ADB Tools"/>
-<img src="https://svg.hamm.cn/?key=前端&value=Vue/WeUI"/>
+<img src="https://svg.hamm.cn/gitee.svg?type=star&user=hamm&project=douyin_helper">
+<img src="https://svg.hamm.cn/gitee.svg?type=fork&user=hamm&project=douyin_helper">
+<img src="https://svg.hamm.cn/gitee.svg?type=watch&user=hamm&project=douyin_helper">
+<img src="https://svg.hamm.cn/gitee.svg?type=commit&user=hamm&project=douyin_helper">
+<img src="https://svg.hamm.cn/badge.svg?key=语言&value=JavaScript"/>
+<img src="https://svg.hamm.cn/badge.svg?key=依赖&value=Electron"/>
+<img src="https://svg.hamm.cn/badge.svg?key=调试&value=ADB Tools"/>
+<img src="https://svg.hamm.cn/badge.svg?key=前端&value=Vue/WeUI"/>
 
 * * *
 
